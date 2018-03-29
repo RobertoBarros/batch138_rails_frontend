@@ -1,0 +1,25 @@
+<div class="home-banner">
+  <h1>Le Wagon</h1>
+  <p>
+    <span id="banner-typed-text"></span>
+  </p>
+  <p>
+    <button id="sweet-alert-demo" class="btn btn-primary">Click me!</button>
+  </p>
+  <p>
+    <%= select_tag "timezone", options_from_collection_for_select(
+      ActiveSupport::TimeZone.all.
+        map { |tz| tz.tzinfo }.
+        sort_by { |tzinfo| tzinfo.name },
+      :name, :name),
+      class: 'select2' %>
+  </p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+    </div>
+  </div>
+</div>
